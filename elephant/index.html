@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="valor">Valor unitário do produto</label>
+        <input type="text" placeholder="Digite o valor do produto" id="valorProd">
+        <label for="qtde">Quantidade</label>
+        <input type="text" placeholder="Digite a quantidade" id="qtde">
+        <select class="estado">
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PR">Paraná</option>
+            <option value="ES">Espírito Santo</option>
+        </select>
+        <input type="submit" value="Calcular!">
+    </form>
+    <div class="containerValor">
+        O valor calculado é: 
+            <div class="calcValor">
+                </div>
+
+    </div>
+  
+</body>
+<script>
+
+    let valorPrd = document.querySelector('#valorProd')
+    let qtde = document.querySelector('#qtde')
+    let calcValor = document.querySelector('.calcValor')
+    let estado = document.querySelector('.estado')
+    document.addEventListener("submit", function(e){
+        
+        e.preventDefault();
+       
+        calcValor.textContent = calcPorEstado(estado.value);
+       
+    })
+
+
+function calcPorEstado(estado){
+    let valor
+    if(estado == 'SP'){
+             valor = valorPrd.value * qtde.value * 1.03
+        
+        }else if(estado == 'MG'){
+            valor = valorPrd.value * qtde.value * 1.07
+        } 
+        else if(estado == 'PR'){
+            valor = valorPrd.value * qtde.value * 1.08
+        } 
+        else if(estado == 'ES'){
+            valor = valorPrd.value * qtde.value * 1.09
+        } 
+        else if(estado == 'RJ'){
+             valor = valorPrd.value * qtde.value * 1.07
+        }
+
+    return valor
+}
+function calculoDesconto(valor, qtde){
+
+
+    return valor
+}
+</script>
+</html>
