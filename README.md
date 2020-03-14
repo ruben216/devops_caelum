@@ -18,3 +18,4 @@ na execução do container, no RUN, vc passa o volume dele como parametro.
 
 Technical Writer - vagas!
 
+Para logar, os containers devem ter um "sidecar" , que seria um container que esta na mesma POD, que envia os logs que estão salvos fisicamente para uma POD responsável por armazenar e disponibilizar(ELK).
