@@ -16,5 +16,5 @@ grep -E --color 'vmx|svm' /proc/cpuinfo
 
 na execução do container, no RUN, vc passa o volume dele como parametro.
 
-
+Technical Writer - vagas!
 
